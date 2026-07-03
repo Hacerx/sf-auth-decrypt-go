@@ -16,6 +16,26 @@ Use it when you need to inspect or reuse locally authenticated Salesforce org re
 
 ## Quick path
 
+### Install
+
+Add the stable module version to your Go project:
+
+```bash
+go get github.com/hacerx/sf-auth-decrypt-go@v1.0.0
+```
+
+Then import the library package:
+
+```go
+import "github.com/hacerx/sf-auth-decrypt-go/authdecrypt"
+```
+
+If you want the CLI from the released module:
+
+```bash
+go install github.com/hacerx/sf-auth-decrypt-go/cmd/sf-auth-decrypt-go@v1.0.0
+```
+
 ### Use as a library
 
 ```go
