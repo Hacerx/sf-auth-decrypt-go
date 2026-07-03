@@ -1,0 +1,84 @@
+schema: spec-driven
+
+project:
+  name: sf-auth-decrypt-go
+  root: "C:\\Users\\equipo\\Documents\\repos\\sf-auth-decrypt-go"
+  artifact_store: openspec
+  initialized_at: "2026-07-02"
+  source_project_to_study_later: "C:\\Users\\equipo\\Documents\\repos\\sf-auth-decrypt"
+
+context: |
+  Tech stack: Empty/new repository; no go.mod or source files detected. User requested a Go library target.
+  Architecture: Not established.
+  Testing: No project test runner or test config detected. Go toolchain available, but no module/packages exist yet.
+  Style: Not established.
+  Persistence: OpenSpec file artifacts live under openspec/.
+
+testing:
+  strict_tdd: false
+  detected_at: "2026-07-02"
+  reason: No go.mod, packages, tests, or project test runner exist yet.
+  toolchain:
+    go:
+      available: true
+      version: go1.26.1 windows/amd64
+  runner:
+    available: false
+    framework: ""
+    command: ""
+    future_command_after_module_init: go test ./...
+  layers:
+    unit:
+      available: false
+      tool: ""
+    integration:
+      available: false
+      tool: ""
+    e2e:
+      available: false
+      tool: ""
+  coverage:
+    available: false
+    command: ""
+    future_command_after_module_init: go test -cover ./...
+  quality:
+    linter:
+      available: false
+      command: ""
+    type_checker:
+      available: false
+      command: ""
+    formatter:
+      available: false
+      command: ""
+      future_command_after_module_init: gofmt -w .
+
+rules:
+  proposal:
+    - Include intent, scope, non-goals, risks, and rollback plan for risky changes.
+    - Preserve the language domain contract: technical artifacts are written in English.
+  specs:
+    - Use RFC 2119 keywords for requirements.
+    - Use Given/When/Then for scenarios.
+  design:
+    - Document architecture decisions with rationale.
+    - Do not invent stack, architecture, or testing details before they exist in the target project.
+  tasks:
+    - Group tasks by phase and keep each task completable in one focused session.
+    - Forecast changed lines and use chained PR planning when work may exceed 400 changed lines.
+  apply:
+    tdd: false
+    test_command: ""
+    review_budget_changed_lines: 400
+    chained_pr_strategy: auto-forecast
+    notes:
+      - Enable RED-GREEN-REFACTOR only after a project test runner is initialized.
+  verify:
+    test_command: ""
+    build_command: ""
+    coverage_threshold: 0
+    notes:
+      - Verification is limited until go.mod and package tests exist.
+  archive:
+    - Warn before merging destructive deltas.
+    - Preserve archived changes as an audit trail under openspec/changes/archive/.

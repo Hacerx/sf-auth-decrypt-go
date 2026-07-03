@@ -1,0 +1,12 @@
+.atl/
+
+# Go build and test outputs
+bin/
+*.exe
+*.test
+coverage.out
+coverage.html
+
+# Local editor/OS noise
+.DS_Store
+Thumbs.db
